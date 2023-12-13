@@ -4,6 +4,7 @@ MAINTAINER Patrick PICHON patrick@pichon.me
 ARG APP_VERSION
 ARG APP_HASH
 ARG BUILD_DATE
+
 # If stable argument is passed it will download stable instead of beta
 ARG STABLE
 
