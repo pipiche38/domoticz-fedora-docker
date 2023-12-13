@@ -40,7 +40,12 @@ RUN set -ex \
     libusb\
     python3\
     python3-devel\
+    python3-multidict\
     python3-pip\
+    python3-wheel\
+    python3-pcapy \
+    python3-frozenlist \
+    python3-scapy \
     openssl1.1-devel\
     ; dnf clean all
 RUN set -ex \
