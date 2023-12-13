@@ -41,6 +41,7 @@ RUN set -ex \
     python3\
     python3-devel\
     python3-pip\
+    openssl1.1-devel\
     ; dnf clean all
 RUN set -ex \
     && OS="$(uname -s | sed 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/')" \
