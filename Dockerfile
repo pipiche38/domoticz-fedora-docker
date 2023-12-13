@@ -33,11 +33,12 @@ RUN set -ex \
     unzip \
     git \
     systemd-devel \
-    libusb \
-    python3 \
-    python3-devel \
-    python3-pip \
-    ; dnf clean all \
+    libusb\
+    python3\
+    python3-devel\
+    python3-pip\
+    ; dnf clean all
+RUN set -ex \
     && OS="$(uname -s | sed 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/')" \
     && MACH=$(uname -m) \
     && if [ ${MACH} = "armv6l" ]; then MACH = "armv7l"; fi \
@@ -49,8 +50,9 @@ RUN set -ex \
     && rm domoticz.tgz \
     && mkdir -p /opt/domoticz/userdata \
     && rm -rf /var/lib/apt/lists/* \
-    && ls -l /usr/bin \
-    && pip3 install setuptools requests
+    && ls -l /usr/bin 
+
+RUN pip3 install setuptools requests
 
 VOLUME /opt/domoticz/userdata
 
