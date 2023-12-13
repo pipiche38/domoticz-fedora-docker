@@ -24,12 +24,12 @@ WORKDIR /opt/domoticz
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Update the image with the latest packages
-RUN yum update -y; yum clean all
+RUN dnf update -y; dnf clean all
 
 
 # Install Domoticz required packages
 RUN set -ex \
-    yum install -y tzdata \
+    && dnf install -y tzdata \
     unzip \
     git \
     systemd-devel \
@@ -37,7 +37,7 @@ RUN set -ex \
     python3 \
     python3-devel \
     python3-pip \
-    ; yum clean all \
+    ; dnf clean all \
     && OS="$(uname -s | sed 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/')" \
     && MACH=$(uname -m) \
     && if [ ${MACH} = "armv6l" ]; then MACH = "armv7l"; fi \
