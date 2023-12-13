@@ -1,5 +1,5 @@
 FROM fedora
-MAINTAINER Patrick PICHON devops@rajeshkumar.xyz
+MAINTAINER Patrick PICHON patrick@pichon.me
 
 ARG APP_VERSION
 ARG APP_HASH
@@ -29,15 +29,15 @@ RUN yum update -y; yum clean all
 
 # Install Domoticz required packages
 RUN set -ex \
-	yum install -y tzdata \
-	unzip \
-	git \
-	systemd-devel \
-	libusb \
-        python3 \
-	python3-devel \
-	python3-pip \
-	; yum clean all \
+    yum install -y tzdata \
+    unzip \
+    git \
+    systemd-devel \
+    libusb \
+    python3 \
+    python3-devel \
+    python3-pip \
+    ; yum clean all \
     && OS="$(uname -s | sed 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/')" \
     && MACH=$(uname -m) \
     && if [ ${MACH} = "armv6l" ]; then MACH = "armv7l"; fi \
