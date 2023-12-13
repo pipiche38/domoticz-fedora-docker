@@ -1,4 +1,7 @@
-FROM fedora
+FROM --platform=linux/arm64 fedora
+FROM --platform=linux/arm/v7 fedora
+FROM --platform=linux/amd64 fedora
+
 MAINTAINER Patrick PICHON patrick@pichon.me
 
 ARG APP_VERSION
