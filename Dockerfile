@@ -37,7 +37,11 @@ RUN set -ex \
     unzip \
     git \
     systemd-devel \
-    libusb\
+    libusb \
+    libcurl-devel \
+    libcurl4 \
+    libsqlite3 \
+    libsqlite3-devel \
     python3\
     python3-devel\
     python3-multidict\
