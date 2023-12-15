@@ -39,9 +39,9 @@ RUN set -ex \
     systemd-devel \
     libusb \
     libcurl-devel \
-    libcurl4 \
-    libsqlite3 \
-    libsqlite3-devel \
+    libcurl \
+    sqlite-libs \
+    sqlite-devel \
     python3\
     python3-devel\
     python3-multidict\
