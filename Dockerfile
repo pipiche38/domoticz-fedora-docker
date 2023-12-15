@@ -40,6 +40,7 @@ RUN set -ex \
     libusb \
     libcurl-devel \
     libcurl \
+    gnutls \
     sqlite-libs \
     sqlite-devel \
     python3\
